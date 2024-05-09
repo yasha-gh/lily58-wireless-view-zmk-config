@@ -4,13 +4,27 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "keys_fi.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#include "keys_fi.h"
-
 / {
+    macros {
+        fi_quote_tick: fi_quote_tick {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER &kp FI_GRAVE &macro_param_2to1>,
+                <&macro_press>,
+                <&kp MACRO_PLACEHOLDER>;
+
+            label = "FI_QUOTE_TICK";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -24,11 +38,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                            &kp DELETE  &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T                             &kp Y       &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G                             &kp H       &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B      &kp LBKT     &kp RBKT  &kp N       &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 ESC  &kp SPACE    &kp RET   &mo 2       &kp BSPC  &kp RGUI
+&trans          &kp F1  &kp F2  &kp F3        &kp F4        &kp F5                                              &kp DELETE  &kp F6    &kp F8     &kp F9   &kp FI_GRAVE     &kp BACKSPACE
+&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T                                               &kp Y       &kp U     &kp I      &kp O    &kp P            &kp FI_SINGLE_QUOTE
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G                                               &kp H       &kp J     &kp K      &kp L    &kp FI_A_UMLAUT  &kp FI_O_UMLAUT
+&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B      &kp FI_GREATER_THAN    &kp FI_LESS_THAN  &kp N       &kp M     &kp COMMA  &kp DOT  &kp FI_MINUS     &trans
+                                &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 ESC  &kp SPACE              &kp RET           &mo 2       &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -44,11 +58,11 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans           &trans    &trans    &trans
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
-&kp CARET   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
-                                        &trans        &trans        &trans        &trans    &trans  &trans     &trans     &trans
+&bt BT_CLR    &bt BT_SEL 0        &bt BT_SEL 1             &bt BT_SEL 2              &bt BT_SEL 3         &bt BT_SEL 4                            &trans             &trans              &trans            &trans           &trans        &trans
+&trans        &trans              &kp FI_LEFT_PARENTHESIS  &kp FI_RIGHT_PARENTHESIS  &kp FI_LEFT_BRACKET  &kp FI_RIGHT_BRACKET                    &kp FI_LEFT_BRACE  &kp FI_RIGHT_BRACE  &kp FI_PLUS       &kp FI_QUESTION  &kp FI_EQUAL  &trans
+&kp FI_TILDE  &kp FI_EXCLAMATION  &kp FI_DOUBLE_QUOTES     &kp FI_HASH               &kp DOLLAR           &kp FI_PERCENT                          &kp FI_AMPERSAND   &kp FI_SLASH        &kp FI_BACKSLASH  &trans           &trans        &trans
+&trans        &trans              &trans                   &trans                    &trans               &trans                &trans    &trans  &kp FI_PIPE        &trans              &trans            &trans           &trans        &trans
+                                                           &trans                    &trans               &trans                &trans    &trans  &trans             &trans              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -64,11 +78,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp TILDE  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                           &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
+&trans        &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                        &kp F6  &kp F7    &kp F8    &kp F9  &kp F10    &kp F11
+&trans        &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                        &kp N6  &kp N7    &kp N8    &kp N9  &kp N0     &kp F12
+&kp FI_CARET  &trans   &trans   &trans   &trans   &trans                        &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
+&kp F13       &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &trans       &trans  &trans  &trans    &trans    &trans  &trans     &trans
+                                &trans   &trans   &trans   &kp LC(A)    &trans  &trans  &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
