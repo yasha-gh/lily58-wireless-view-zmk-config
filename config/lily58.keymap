@@ -78,11 +78,11 @@
 
             display-name = "Lower";
             bindings = <
-&trans          &trans                   &trans                    &trans               &trans                &trans                               &trans       &trans             &trans              &trans            &trans        &trans
-&trans          &kp FI_LEFT_PARENTHESIS  &kp FI_RIGHT_PARENTHESIS  &kp FI_LEFT_BRACKET  &kp FI_RIGHT_BRACKET  &trans                               &trans       &kp FI_LEFT_BRACE  &kp FI_RIGHT_BRACE  &kp FI_QUESTION   &kp FI_EQUAL  &trans
-&kp FI_SECTION  &kp FI_EXCLAMATION       &kp FI_DOUBLE_QUOTES      &kp FI_HASH          &kp DOLLAR            &kp FI_PERCENT                       &kp FI_PIPE  &kp FI_AMPERSAND   &kp FI_SLASH        &kp FI_BACKSLASH  &kp FI_PLUS   &trans
-&trans          &trans                   &trans                    &trans               &trans                &trans          &trans       &trans  &trans       &trans             &trans              &trans            &trans        &trans
-                                                                   &trans               &trans                &trans          &kp LC(A)    &trans  &trans       &trans             &trans
+&trans          &trans              &trans                   &trans                    &trans               &trans                                     &trans       &trans             &trans              &trans            &trans        &trans
+&trans          &trans              &kp FI_LEFT_PARENTHESIS  &kp FI_RIGHT_PARENTHESIS  &kp FI_LEFT_BRACKET  &kp FI_RIGHT_BRACKET                       &trans       &kp FI_LEFT_BRACE  &kp FI_RIGHT_BRACE  &kp FI_QUESTION   &kp FI_EQUAL  &trans
+&kp FI_SECTION  &kp FI_EXCLAMATION  &kp FI_DOUBLE_QUOTES     &kp FI_HASH               &kp DOLLAR           &kp FI_PERCENT                             &kp FI_PIPE  &kp FI_AMPERSAND   &kp FI_SLASH        &kp FI_BACKSLASH  &kp FI_PLUS   &trans
+&trans          &trans              &trans                   &trans                    &trans               &trans                &trans       &trans  &trans       &trans             &trans              &trans            &trans        &trans
+                                                             &trans                    &trans               &trans                &kp LC(A)    &trans  &trans       &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
