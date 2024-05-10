@@ -106,11 +106,11 @@
 
             display-name = "Base";
             bindings = <
-&trans          &tmux_w_1         &tmux_w_2  &tmux_w_3           &tmux_w_4     &tmux_w_5                                           &kp DELETE  &trans          &trans         &trans   &kp FI_GRAVE     &kp BACKSPACE
-&kp TAB         &kp Q             &kp W      &long_mt FI_EURO E  &kp R         &kp T                                               &kp Y       &kp U           &kp I          &kp O    &kp P            &kp FI_SINGLE_QUOTE
-&kp LEFT_SHIFT  &long_mt FI_AT A  &kp S      &kp D               &kp F         &kp G                                               &kp H       &kp J           &kp K          &kp L    &kp FI_O_UMLAUT  &kp FI_A_UMLAUT
-&kp LCTRL       &kp Z             &kp X      &kp C               &kp V         &kp B      &kp FI_LESS_THAN    &kp FI_GREATER_THAN  &kp N       &mt FI_MICRO M  &kp COMMA      &kp DOT  &kp FI_MINUS     &kp RIGHT_SHIFT
-                                             &kp LEFT_GUI        &kp LEFT_ALT  &lt 1 ESC  &kp SPACE           &kp RET              &mo 2       &tog 1          &kp RIGHT_ALT
+&trans          &tmux_w_1         &tmux_w_2  &tmux_w_3           &tmux_w_4     &tmux_w_5                                           &kp DELETE  &trans               &trans         &trans   &kp FI_GRAVE     &kp BACKSPACE
+&kp TAB         &kp Q             &kp W      &long_mt FI_EURO E  &kp R         &kp T                                               &kp Y       &kp U                &kp I          &kp O    &kp P            &kp FI_SINGLE_QUOTE
+&kp LEFT_SHIFT  &long_mt FI_AT A  &kp S      &kp D               &kp F         &kp G                                               &kp H       &kp J                &kp K          &kp L    &kp FI_O_UMLAUT  &kp FI_A_UMLAUT
+&kp LCTRL       &kp Z             &kp X      &kp C               &kp V         &kp B      &kp FI_LESS_THAN    &kp FI_GREATER_THAN  &kp N       &long_mt FI_MICRO M  &kp COMMA      &kp DOT  &kp FI_MINUS     &kp RIGHT_SHIFT
+                                             &kp LEFT_GUI        &kp LEFT_ALT  &lt 1 ESC  &kp SPACE           &kp RET              &mo 2       &tog 1               &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -126,11 +126,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans                      &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &mt F11 BACKSPACE  &kp F7          &kp F8  &kp F9     &kp F10  &trans
-&trans                      &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                     &kp N6             &kp N7          &kp N8  &kp N9     &kp N0   &kp F11
-&mt LEFT_SHIFT FI_ONE_HALF  &trans   &trans   &trans   &trans   &trans                     &kp LEFT           &kp DOWN_ARROW  &kp UP  &kp RIGHT  &trans   &kp F12
-&kp F13                     &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &trans    &trans  &trans             &trans          &trans  &trans     &trans   &trans
-                                              &trans   &trans   &trans   &trans    &trans  &trans             &trans          &trans
+&trans                      &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &mt F6 BACKSPACE  &kp F7          &kp F8  &kp F9     &kp F10  &trans
+&trans                      &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                     &kp N6            &kp N7          &kp N8  &kp N9     &kp N0   &kp F11
+&mt LEFT_SHIFT FI_ONE_HALF  &trans   &trans   &trans   &trans   &trans                     &kp LEFT          &kp DOWN_ARROW  &kp UP  &kp RIGHT  &trans   &kp F12
+&kp F13                     &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &trans    &trans  &trans            &trans          &trans  &trans     &trans   &trans
+                                              &trans   &trans   &trans   &trans    &trans  &trans            &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -158,10 +158,10 @@
 
         utilities {
             bindings = <
-&trans      &trans        &trans        &trans        &trans        &trans                          &trans  &trans   &trans  &trans  &trans  &trans
-&bt BT_CLR  &trans        &trans        &trans        &trans        &trans                          &trans  &trans   &trans  &trans  &trans  &trans
-&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &kp INS  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans   &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans                          &trans  &trans   &trans        &trans  &trans  &trans
+&bt BT_CLR  &trans        &trans        &trans        &trans        &trans                          &trans  &trans   &trans        &trans  &trans  &trans
+&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &kp INS  &kp CAPSLOCK  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans   &trans        &trans  &trans  &trans
                                         &trans        &trans        &trans        &trans    &trans  &trans  &trans   &trans
             >;
         };
