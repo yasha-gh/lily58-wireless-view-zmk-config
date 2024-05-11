@@ -76,14 +76,14 @@
         tmux_w_5: tmux_w_5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp NUMBER_4>;
+            bindings = <&kp LC(A) &kp NUMBER_5>;
             label = "TMUX_W_5";
         };
 
         caret_unicode: caret_unicode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CARET>;
+            bindings = <&kp FI_CARET &kp SPACE>;
             label = "CARET_UNICODE";
         };
     };
