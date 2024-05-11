@@ -170,11 +170,11 @@
 
             display-name = "Lower";
             bindings = <
-&trans                   &trans              &trans                   &trans                    &trans               &trans                                     &trans       &trans             &trans              &trans           &trans            &trans
-&trans                   &trans              &kp FI_DOUBLE_QUOTES     &kp FI_HASH               &kp FI_DOLLAR        &kp FI_PERCENT                             &trans       &kp FI_AMPERSAND   &kp FI_PLUS         &kp FI_QUESTION  &kp FI_BACKSLASH  &kp FI_GRAVE
-&caret_tap LEFT_SHIFT 0  &kp FI_EXCLAMATION  &kp FI_LEFT_PARENTHESIS  &kp FI_RIGHT_PARENTHESIS  &kp FI_LEFT_BRACKET  &kp FI_RIGHT_BRACKET                       &kp FI_PIPE  &kp FI_LEFT_BRACE  &kp FI_RIGHT_BRACE  &kp FI_SLASH     &kp FI_EQUAL      &trans
-&trans                   &trans              &trans                   &trans                    &trans               &trans                &trans       &trans  &trans       &trans             &trans              &trans           &trans            &trans
-                                                                      &trans                    &trans               &trans                &kp LC(A)    &trans  &trans       &trans             &trans
+&trans                   &trans              &trans                   &trans                    &trans               &trans                                  &trans       &trans             &trans              &trans           &trans            &trans
+&trans                   &trans              &kp FI_DOUBLE_QUOTES     &kp FI_HASH               &kp FI_DOLLAR        &kp FI_PERCENT                          &trans       &kp FI_AMPERSAND   &kp FI_PLUS         &kp FI_QUESTION  &kp FI_BACKSLASH  &kp FI_GRAVE
+&caret_tap LEFT_SHIFT 0  &kp FI_EXCLAMATION  &kp FI_LEFT_PARENTHESIS  &kp FI_RIGHT_PARENTHESIS  &kp FI_LEFT_BRACKET  &kp FI_RIGHT_BRACKET                    &kp FI_PIPE  &kp FI_LEFT_BRACE  &kp FI_RIGHT_BRACE  &kp FI_SLASH     &kp FI_EQUAL      &trans
+&trans                   &trans              &trans                   &trans                    &trans               &trans                &trans    &trans  &trans       &trans             &trans              &trans           &trans            &trans
+                                                                      &trans                    &trans               &trans                &trans    &trans  &trans       &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -190,11 +190,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans                   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &mt F6 BACKSPACE  &kp F7          &kp F8  &kp F9     &kp F10            &trans
-&trans                   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                     &kp N6            &kp N7          &kp N8  &kp N9     &kp N0             &kp F11
-&tilde_tap LEFT_SHIFT 0  &trans   &trans   &trans   &trans   &trans                     &kp LEFT          &kp DOWN_ARROW  &kp UP  &kp RIGHT  &kp K_SCROLL_UP    &kp F12
-&kp F13                  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &trans    &trans  &trans            &trans          &trans  &trans     &kp K_SCROLL_DOWN  &trans
-                                           &trans   &trans   &trans   &trans    &trans  &trans            &trans          &trans
+&trans                   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                        &mt F6 BACKSPACE  &kp F7          &kp F8  &kp F9     &kp F10            &trans
+&trans                   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                        &kp N6            &kp N7          &kp N8  &kp N9     &kp N0             &kp F11
+&tilde_tap LEFT_SHIFT 0  &trans   &trans   &trans   &trans   &trans                        &kp LEFT          &kp DOWN_ARROW  &kp UP  &kp RIGHT  &kp K_SCROLL_UP    &kp F12
+&kp F13                  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &trans       &trans  &trans            &trans          &trans  &trans     &kp K_SCROLL_DOWN  &trans
+                                           &trans   &trans   &trans   &kp LC(A)    &trans  &trans            &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -202,21 +202,14 @@
 
         utilities_num_pad {
             bindings = <
-&trans           &trans        &trans        &trans        &trans        &bt BT_CLR                                   &trans         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp END        &trans
-&trans           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                 &kp PAGE_UP    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_EQUAL   &kp HOME
-&kp PAUSE_BREAK  &trans        &trans        &trans        &trans        &trans                                       &kp PAGE_DOWN  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE  &kp KP_MULTIPLY
-&kp SCROLLLOCK   &trans        &trans        &trans        &trans        &kp PRINTSCREEN  &kp CAPSLOCK    &kp INSERT  &kp KP_NUM     &kp KP_DOT       &kp KP_NUMBER_0  &kp KP_COMMA     &kp KP_PLUS    &kp KP_MINUS
-                                             &trans        &trans        &trans           &trans          &trans      &trans         &trans           &trans
+&trans          &trans           &trans        &trans        &trans        &bt BT_CLR                         &mt KP_NUMLOCK DELETE  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp END        &trans
+&kp CAPSLOCK    &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &kp PAGE_UP            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_EQUAL   &kp HOME
+&kp INSERT      &trans           &trans        &trans        &trans        &trans                             &kp PAGE_DOWN          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE  &kp KP_MULTIPLY
+&kp SCROLLLOCK  &kp PAUSE_BREAK  &trans        &trans        &trans        &kp PRINTSCREEN  &trans    &trans  &kp KP_NUM             &kp KP_DOT       &kp KP_NUMBER_0  &kp KP_COMMA     &kp KP_PLUS    &kp KP_MINUS
+                                               &trans        &trans        &trans           &trans    &trans  &trans                 &trans           &trans
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        utilities_layer {
-            if-layers = <1 3>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
