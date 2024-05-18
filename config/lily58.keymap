@@ -191,7 +191,7 @@
 &trans                   &trans              &trans                   &trans                    &trans               &trans                                  &trans             &trans             &trans              &trans           &trans            &trans
 &kp FI_SECT              &kp FI_ONE_HALF     &kp FI_DOUBLE_QUOTES     &kp FI_HASH               &kp FI_DOLLAR        &kp FI_PERCENT                          &trans             &kp FI_AMPERSAND   &kp FI_PLUS         &kp FI_QUESTION  &kp FI_BACKSLASH  &zombie_backtick
 &caret_tap LEFT_SHIFT 0  &kp FI_EXCLAMATION  &kp FI_LEFT_PARENTHESIS  &kp FI_RIGHT_PARENTHESIS  &kp FI_LEFT_BRACKET  &kp FI_RIGHT_BRACKET                    &kp FI_PIPE        &kp FI_LEFT_BRACE  &kp FI_RIGHT_BRACE  &kp FI_SLASH     &kp FI_EQUAL      &trans
-&trans                   &trans              &kp FI_LESS_THAN         &kp FI_GREATER_THAN       &kp FI_AT            &kp FI_EURO           &trans    &trans  &kp FI_POUND_SIGN  &kp FI_MICRO       &trans              &trans           &trans            &trans
+&trans                   &kp FI_LESS_THAN    &kp FI_GREATER_THAN      &kp FI_EURO               &kp FI_AT            &trans                &trans    &trans  &kp FI_POUND_SIGN  &kp FI_MICRO       &trans              &trans           &trans            &trans
                                                                       &trans                    &trans               &trans                &trans    &trans  &trans             &trans             &trans
             >;
 
